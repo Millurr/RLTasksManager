@@ -26,6 +26,8 @@ namespace RLTasksManager.Client
             builder.Services.AddBlazoredToast();
             builder.Services.AddBlazoredLocalStorage();
 
+            builder.Services.AddScoped<ISiteService, SiteService>();
+
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
 

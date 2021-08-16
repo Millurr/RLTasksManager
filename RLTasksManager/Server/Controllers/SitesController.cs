@@ -58,7 +58,7 @@ namespace RLTasksManager.Server.Controllers
             return Ok(dbSite);
         }
 
-        [HttpPut("updateall")]
+        [HttpGet("updateall")]
         public async Task<IActionResult> EndOfDayUpdate()
         {
             var sites = await context.Sites.ToListAsync();
